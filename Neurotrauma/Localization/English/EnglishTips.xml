@@ -20,7 +20,7 @@
 
     <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Kidney and liver damage will cause neurotrauma.</loadingscreentip>
 
-    <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ For a full range of diagnosis, remember to check the Health UI, Health Scanner, and Hematology Analyzer.</loadingscreentip>
+    <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ For a full range of diagnosis, remember to check the Health UI, health scanner, and hematology analyzer.</loadingscreentip>
 
     <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Multiple symptoms are exclusive to hemotransfusion shock.</loadingscreentip>
 
@@ -64,7 +64,7 @@
 
     <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Most affliction chances and rate of gain can be configured. To find the config, open the Esc menu after loading into a game. Screams, plaster behavior, and organ rejection may also be configured.</loadingscreentip>
 
-    <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ It is possible, but difficult, to play without a Health Scanner or Hematology Analyzer. Most afflictions can be diagnosed with context, symptoms, and visual effects.</loadingscreentip>
+    <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ It is possible, but difficult, to play without a health scanner or hematology analyzer. Most afflictions can be diagnosed with context, symptoms, and visual effects.</loadingscreentip>
 
     <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Dislocations are extremely common after being caught in an explosion.</loadingscreentip>
 
@@ -80,7 +80,7 @@
 
     <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Some symptoms override each other. You can't hear palpitations if your heart isn't beating.</loadingscreentip>
 
-    <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Neurotrauma is synonymous with brain damage. 200% Neurotrauma is equivalent to brain death.</loadingscreentip>
+    <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Neurotrauma is synonymous with brain damage. 200% neurotrauma is equivalent to brain death.</loadingscreentip>
 
     <!-- <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ </loadingscreentip> -->
 
