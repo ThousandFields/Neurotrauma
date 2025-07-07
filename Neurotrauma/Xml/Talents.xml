@@ -21,9 +21,9 @@
                             <!-- counter half of the psychosis applied by alien blood -->
                             <!-- also counter most of the hemo shock -->
                             <!-- this still causes approximately 5% bloodloss and 2.5% organ damage -->
-                            <StatusEffect tags="medical" type="OnAbility" target="UseTarget" duration="1.0" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+                            <StatusEffect tags="medical" type="OnAbility" target="UseTarget" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
                                 <ReduceAffliction identifier="psychosis" amount="15" />
-                                <ReduceAffliction identifier="hemotransfusionshock" amount="95" />
+                                <ReduceAffliction identifier="hemotransfusionshock" amount="90" />
                             </StatusEffect>
                         </StatusEffects>
                     </CharacterAbilityApplyStatusEffects>
