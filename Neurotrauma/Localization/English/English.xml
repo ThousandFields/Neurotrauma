@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="English" nowhitespace="false" translatedname="English">
-<Override>
 <!-- ITEMS -->
 
 <!-- /// Gear /// -->
@@ -880,5 +879,4 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Neurotrauma is synonymous with brain damage. 200% neurotrauma means brain death.</loadingscreentip>
 
 <!-- <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ </loadingscreentip> -->
-</Override>
 </infotexts>

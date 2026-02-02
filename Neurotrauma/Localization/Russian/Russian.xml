@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Russian" nowhitespace="false" translatedname="Русский">
-<Override>
 <!-- Предметы -->
 
 <!-- /// Экипировка /// -->
@@ -876,5 +875,4 @@
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Нейротравма - синоним повреждения мозга. 200% нейротравмы означает смерть мозга.</loadingscreentip>
 
 <!-- <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ </loadingscreentip> -->
-</Override>
 </infotexts>
