@@ -44,8 +44,7 @@
     </Item>
     
     <Item name="" identifier="endovascballoon" category="Medical" maxstacksize="16" maxstacksizecharacterinventory="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
-        <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
-        <PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="0.5"/>
+        <PreferredContainer primary="toxcontainer" minamount="0" maxamount="1" spawnprobability="0.5"/>
 
         <Fabricate suitablefabricators="medicalfabricator" amount="2">
             <RequiredSkill identifier="medical" level="25"/>
