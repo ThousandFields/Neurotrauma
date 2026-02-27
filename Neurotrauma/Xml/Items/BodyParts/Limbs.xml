@@ -25,7 +25,7 @@
                 <Conditional hastag="neq refrigerated" targetcontainer="true" />
                 <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
             </StatusEffect>
-            <StatusEffect type="OnContained" target="This" condition="0.5" delay="5" interval="5" comparison="and">
+            <StatusEffect type="OnContained" target="This" condition="0.5" delay="5" interval="5" disabledeltatime="true" comparison="and">
                 <Conditional condition="gte 95" />
                 <Conditional hastag="refrigerated" targetcontainer="true" />
             </StatusEffect>
@@ -64,7 +64,7 @@
                 <Conditional hastag="neq refrigerated" targetcontainer="true" />
                 <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
             </StatusEffect>
-            <StatusEffect type="OnContained" target="This" condition="0.5" delay="5" interval="5" comparison="and">
+            <StatusEffect type="OnContained" target="This" condition="0.5" delay="5" interval="5" disabledeltatime="true" comparison="and">
                 <Conditional condition="gte 95" />
                 <Conditional hastag="refrigerated" targetcontainer="true" />
             </StatusEffect>
@@ -102,7 +102,7 @@
                 <Conditional hastag="neq refrigerated" targetcontainer="true" />
                 <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
             </StatusEffect>
-            <StatusEffect type="OnContained" target="This" condition="0.5" delay="5" interval="5" comparison="and">
+            <StatusEffect type="OnContained" target="This" condition="0.5" delay="5" interval="5" disabledeltatime="true" comparison="and">
                 <Conditional condition="gte 95" />
                 <Conditional hastag="refrigerated" targetcontainer="true" />
             </StatusEffect>
@@ -141,7 +141,7 @@
                 <Conditional hastag="neq refrigerated" targetcontainer="true" />
                 <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
             </StatusEffect>
-            <StatusEffect type="OnContained" target="This" condition="0.5" delay="5" interval="5" comparison="and">
+            <StatusEffect type="OnContained" target="This" condition="0.5" delay="5" interval="5" disabledeltatime="true" comparison="and">
                 <Conditional condition="gte 95" />
                 <Conditional hastag="refrigerated" targetcontainer="true" />
             </StatusEffect>
@@ -180,7 +180,7 @@
                 <Conditional hastag="neq refrigerated" targetcontainer="true" />
                 <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
             </StatusEffect>
-            <StatusEffect type="OnContained" target="This" condition="0.5" delay="5" interval="5" comparison="and">
+            <StatusEffect type="OnContained" target="This" condition="0.5" delay="5" interval="5" disabledeltatime="true" comparison="and">
                 <Conditional condition="gte 95" />
                 <Conditional hastag="refrigerated" targetcontainer="true" />
             </StatusEffect>
@@ -219,7 +219,7 @@
                 <Conditional hastag="neq refrigerated" targetcontainer="true" />
                 <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
             </StatusEffect>
-            <StatusEffect type="OnContained" target="This" condition="0.5" delay="5" interval="5" comparison="and">
+            <StatusEffect type="OnContained" target="This" condition="0.5" delay="5" interval="5" disabledeltatime="true" comparison="and">
                 <Conditional condition="gte 95" />
                 <Conditional hastag="refrigerated" targetcontainer="true" />
             </StatusEffect>
