@@ -21,11 +21,11 @@
                 <ParticleEmitter particle="bloodsplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
             </StatusEffect>
             <!-- making the limb go kaputt if left outside of refrigeration -->
-            <StatusEffect type="Always" target="This" condition="-1.0" interval="5" disabledeltatime="true" conditionalComparison="And">
+            <StatusEffect type="Always" target="This" condition="-1.0" delay="5" interval="5" disabledeltatime="true" conditionalComparison="And">
                 <Conditional hastag="neq refrigerated" targetcontainer="true" />
                 <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
             </StatusEffect>
-            <StatusEffect type="OnContained" target="This" condition="0.1" comparison="and">
+            <StatusEffect type="OnContained" target="This" condition="0.5" delay="5" interval="5" disabledeltatime="true" comparison="and">
                 <Conditional condition="gte 95" />
                 <Conditional hastag="refrigerated" targetcontainer="true" />
             </StatusEffect>
@@ -60,11 +60,11 @@
                 <ParticleEmitter particle="bloodsplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
             </StatusEffect>
             <!-- making the limb go kaputt if left outside of refrigeration -->
-            <StatusEffect type="Always" target="This" condition="-1.0" interval="5" disabledeltatime="true" conditionalComparison="And">
+            <StatusEffect type="Always" target="This" condition="-1.0" delay="5" interval="5" disabledeltatime="true" conditionalComparison="And">
                 <Conditional hastag="neq refrigerated" targetcontainer="true" />
                 <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
             </StatusEffect>
-            <StatusEffect type="OnContained" target="This" condition="0.1" comparison="and">
+            <StatusEffect type="OnContained" target="This" condition="0.5" delay="5" interval="5" disabledeltatime="true" comparison="and">
                 <Conditional condition="gte 95" />
                 <Conditional hastag="refrigerated" targetcontainer="true" />
             </StatusEffect>
@@ -98,11 +98,11 @@
                 <ParticleEmitter particle="bloodsplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
             </StatusEffect>
             <!-- making the limb go kaputt if left outside of refrigeration -->
-            <StatusEffect type="Always" target="This" condition="-1.0" interval="5" disabledeltatime="true" conditionalComparison="And">
+            <StatusEffect type="Always" target="This" condition="-1.0" delay="5" interval="5" disabledeltatime="true" conditionalComparison="And">
                 <Conditional hastag="neq refrigerated" targetcontainer="true" />
                 <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
             </StatusEffect>
-            <StatusEffect type="OnContained" target="This" condition="0.1" comparison="and">
+            <StatusEffect type="OnContained" target="This" condition="0.5" delay="5" interval="5" disabledeltatime="true" comparison="and">
                 <Conditional condition="gte 95" />
                 <Conditional hastag="refrigerated" targetcontainer="true" />
             </StatusEffect>
@@ -137,11 +137,11 @@
                 <ParticleEmitter particle="bloodsplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
             </StatusEffect>
             <!-- making the limb go kaputt if left outside of refrigeration -->
-            <StatusEffect type="Always" target="This" condition="-1.0" interval="5" disabledeltatime="true" conditionalComparison="And">
+            <StatusEffect type="Always" target="This" condition="-1.0" delay="5" interval="5" disabledeltatime="true" conditionalComparison="And">
                 <Conditional hastag="neq refrigerated" targetcontainer="true" />
                 <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
             </StatusEffect>
-            <StatusEffect type="OnContained" target="This" condition="0.1" comparison="and">
+            <StatusEffect type="OnContained" target="This" condition="0.5" delay="5" interval="5" disabledeltatime="true" comparison="and">
                 <Conditional condition="gte 95" />
                 <Conditional hastag="refrigerated" targetcontainer="true" />
             </StatusEffect>
@@ -176,11 +176,11 @@
                 <ParticleEmitter particle="bloodsplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
             </StatusEffect>
             <!-- making the limb go kaputt if left outside of refrigeration -->
-            <StatusEffect type="Always" target="This" condition="-1.0" interval="5" disabledeltatime="true" conditionalComparison="And">
+            <StatusEffect type="Always" target="This" condition="-1.0" delay="5" interval="5" disabledeltatime="true" conditionalComparison="And">
                 <Conditional hastag="neq refrigerated" targetcontainer="true" />
                 <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
             </StatusEffect>
-            <StatusEffect type="OnContained" target="This" condition="0.1" comparison="and">
+            <StatusEffect type="OnContained" target="This" condition="0.5" delay="5" interval="5" disabledeltatime="true" comparison="and">
                 <Conditional condition="gte 95" />
                 <Conditional hastag="refrigerated" targetcontainer="true" />
             </StatusEffect>
@@ -215,11 +215,11 @@
                 <ParticleEmitter particle="bloodsplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
             </StatusEffect>
             <!-- making the limb go kaputt if left outside of refrigeration -->
-            <StatusEffect type="Always" target="This" condition="-1.0" interval="5" disabledeltatime="true" conditionalComparison="And">
+            <StatusEffect type="Always" target="This" condition="-1.0" delay="5" interval="5" disabledeltatime="true" conditionalComparison="And">
                 <Conditional hastag="neq refrigerated" targetcontainer="true" />
                 <Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
             </StatusEffect>
-            <StatusEffect type="OnContained" target="This" condition="0.1" comparison="and">
+            <StatusEffect type="OnContained" target="This" condition="0.5" delay="5" interval="5" disabledeltatime="true" comparison="and">
                 <Conditional condition="gte 95" />
                 <Conditional hastag="refrigerated" targetcontainer="true" />
             </StatusEffect>

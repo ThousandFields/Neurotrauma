@@ -556,10 +556,12 @@
 
     <!-- Regenerative ointment / increases natural healing of most surface trauma -->
     <Item name="" identifier="skinaid" category="Medical" Tags="smallitem,medical" maxstacksize="32" maxstacksizecharacterinventory="8" useinhealthinterface="true" cargocontaineridentifier="mediccrate" scale="0.265" impactsoundtag="impact_soft">
+        
+        <!-- We're gonna do something with this item later
         <PreferredContainer primary="medcab" minamount="10" maxamount="16" spawnprobability="1"/>
         <PreferredContainer primary="supplycab" minamount="1" maxamount="2" spawnprobability="0.1"/>
         <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="4" spawnprobability="0.12"/>
-        <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="10" spawnprobability="0.25"/>
+        <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="10" spawnprobability="0.25"/>-->
 
         <!--<Price baseprice="54">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="12"/>
