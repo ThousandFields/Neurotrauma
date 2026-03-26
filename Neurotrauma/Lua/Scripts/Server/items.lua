@@ -2095,12 +2095,12 @@ local function InfuseBloodpack(item, packtype, usingCharacter, targetCharacter, 
 		if HF.StartsWith(tag, "acid") then
 			local split = HF.SplitString(tag, ":")
 			if split[2] ~= nil then
-				HF.AddAffliction(targetCharacter, "acidosis", tonumber(split[2]) / 5 * usefulFraction, usingCharacter)
+				HF.AddAffliction(targetCharacter, "acidosis", tonumber(split[2]) / 10 * usefulFraction, usingCharacter)
 			end
 		elseif HF.StartsWith(tag, "alkal") then
 			local split = HF.SplitString(tag, ":")
 			if split[2] ~= nil then
-				HF.AddAffliction(targetCharacter, "alkalosis", tonumber(split[2]) / 5 * usefulFraction, usingCharacter)
+				HF.AddAffliction(targetCharacter, "alkalosis", tonumber(split[2]) / 10 * usefulFraction, usingCharacter)
 			end
 		end
 	end
