@@ -14,8 +14,10 @@
 
         <Deconstruct/>
 
-        <Price baseprice="30">
-            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="25"/>
+        <Price baseprice="9">
+            <Price storeidentifier="merchantoutpost" multiplier="1.2" minavailable="24"/>
+            <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="56"/>
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="56"/>
         </Price>
 
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="320,0,64,64" origin="0.5,0.5"/>
@@ -140,8 +142,10 @@
         <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.5"/>
         <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.125"/>
 
-        <Price baseprice="100">
-            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="6"/>
+        <Price baseprice="40">
+            <Price storeidentifier="merchantoutpost" multiplier="1.2" minavailable="6"/>
+            <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="12"/>
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="12"/>
         </Price>
 
         <Fabricate suitablefabricators="medicalfabricator" requiredtime="15" amount="1">
