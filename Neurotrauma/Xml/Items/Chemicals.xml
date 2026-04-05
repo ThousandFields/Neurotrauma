@@ -458,8 +458,10 @@
 
      <!-- Analgesic Tank -->
     <Item name="" identifier="analgesictank" category="Medical" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="1" Tags="smallitem,analgesictank" cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
-        <Price baseprice="200" soldbydefault="false">
-            <Price storeidentifier="merchantmedical" sold="true" multiplier="1.5" minavailable="1"/>
+        <Price baseprice="270" soldbydefault="false">
+            <Price storeidentifier="merchantoutpost" multiplier="1.8" minavailable="1"/>
+            <Price storeidentifier="merchantcity" multiplier="1.5" minavailable="2"/>
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="1.2" minavailable="1"/>
         </Price>
         <Deconstruct time="10">
             <Item identifier="aluminium" />
@@ -493,13 +495,18 @@
     
      <!-- Toxin Filter -->
     <Item name="" identifier="toxfilter" category="Medical" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="8" Tags="smallitem,toxfilter" cargocontaineridentifier="metalcrate" scale="0.15" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
+        <Price baseprice="485" soldbydefault="false">
+            <Price storeidentifier="merchantoutpost" multiplier="1.5" minavailable="1"/>
+            <Price storeidentifier="merchantcity" multiplier="1.8" minavailable="2"/>
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="1.5" minavailable="1"/>
+        </Price>
         <Deconstruct time="10">
             <Item identifier="aluminium" />
         </Deconstruct>
         <Fabricate suitablefabricators="medicalfabricator" requiredtime="20">
             <RequiredSkill identifier="medical" level="40" />
             <RequiredSkill identifier="mechanical" level="40" />
-            <RequiredItem identifier="titaniumaluminiumalloy" amount="1" />
+            <RequiredItem identifier="aluminium" amount="2" />
             <RequiredItem identifier="fpgacircuit" amount="2" />
             <RequiredItem identifier="organicfiber" amount="2" />
             <RequiredItem identifier="sodium" amount="2" />
@@ -523,6 +530,11 @@
     <!-- Dialyzer -->
     <Item name="" identifier="dialyzer" category="Medical" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="8" Tags="smallitem,dialyzer" cargocontaineridentifier="metalcrate" scale="0.15" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
         
+        <Price baseprice="420" soldbydefault="false">
+            <Price storeidentifier="merchantoutpost" multiplier="1.5" minavailable="1"/>
+            <Price storeidentifier="merchantcity" multiplier="1.8" minavailable="2"/>
+            <Price storeidentifier="merchantmedical" sold="true" multiplier="1.5" minavailable="1"/>
+        </Price>
         <Deconstruct time="10">
             <Item identifier="aluminium" />
         </Deconstruct>
@@ -530,9 +542,9 @@
         <Fabricate suitablefabricators="medicalfabricator" requiredtime="20">
             <RequiredSkill identifier="medical" level="60" />
             <RequiredSkill identifier="mechanical" level="40" />
-            <RequiredItem identifier="titaniumaluminiumalloy" amount="1" />
+            <RequiredItem identifier="aluminum" amount="2" />
             <RequiredItem identifier="fpgacircuit" amount="2" />
-            <RequiredItem identifier="organicfiber" amount="4" />
+            <RequiredItem identifier="organicfiber" amount="2" />
             <RequiredItem identifier="sodium" amount="2" />
             <RequiredItem identifier="calcium" amount="1" />
         </Fabricate>
