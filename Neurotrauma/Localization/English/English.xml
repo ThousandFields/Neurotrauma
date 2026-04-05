@@ -159,9 +159,9 @@
 <entitydescription.ringerssolution>A solution of several salts dissolved in water for the purpose of treating low blood pressure or fluid loss. Isotonic to blood.</entitydescription.ringerssolution>
 
 <entityname.antiseptic>Antiseptic</entityname.antiseptic>
-<entitydescription.antiseptic>Can be used to treat infected wounds using an antiseptic spray.</entitydescription.antiseptic>
+<entitydescription.antiseptic>Can be used to disinfect wounds using an antiseptic sprayer.</entitydescription.antiseptic>
 
-<entityname.antisepticspray>Antiseptic spray</entityname.antisepticspray>
+<entityname.antisepticspray>Antiseptic sprayer</entityname.antisepticspray>
 <entitydescription.antisepticspray>Used to apply antiseptic to infected wounds.</entitydescription.antisepticspray>
 
 <entityname.propofol>Propofol</entityname.propofol>
@@ -170,7 +170,7 @@
 <entityname.gypsum>Gypsum</entityname.gypsum>
 <entitydescription.gypsum>A fine mineral powder that is used to encase fractures in extremeties in a cast. Apply a bandage first.</entitydescription.gypsum>
 
-<entityname.gelipack>Gel ice pack</entityname.gelipack>
+<entityname.gelipack>Gel coolant pack</entityname.gelipack>
 <entitydescription.gelipack>A reusable cooling pack filled with organic gel that never expires. Loses its effectiveness without refrigeration.</entitydescription.gelipack>
 
 
