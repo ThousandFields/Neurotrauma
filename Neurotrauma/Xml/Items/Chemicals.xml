@@ -423,7 +423,7 @@
         <Fabricate suitablefabricators="medicalfabricator" requiredtime="20">
             <RequiredSkill identifier="medical" level="60" />
             <RequiredSkill identifier="mechanical" level="40" />
-            <RequiredItem identifier="aluminum" amount="2" />
+            <RequiredItem identifier="aluminium" amount="2" />
             <RequiredItem identifier="fpgacircuit" amount="2" />
             <RequiredItem identifier="organicfiber" amount="2" />
             <RequiredItem identifier="sodium" amount="2" />
