@@ -278,14 +278,6 @@
             <StatusEffect type="OnUse" target="This" Condition="-100.0" setvalue="true">
                 <Sound file="%ModDir%/Sound/ointment.ogg" range="500" />
             </StatusEffect>
-            <StatusEffect statuseffecttags="medical" type="OnSuccess" target="This, Limb" duration="1.0">
-                <ReduceAffliction type="infectedwound" amount="60" />
-                <Affliction identifier="ointmented" amount="100" />
-            </StatusEffect>
-            <StatusEffect statuseffecttags="medical" type="OnFailure" target="This, Limb" duration="1.0">
-                <ReduceAffliction type="infectedwound" amount="30" />
-                <Affliction identifier="ointmented" amount="80" />
-            </StatusEffect>
             <StatusEffect type="OnBroken" target="This">
                 <Remove/>
             </StatusEffect>
