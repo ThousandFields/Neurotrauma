@@ -4,8 +4,8 @@
     <!-- Ringer's solution / a better version of saline -->
     <Item name="" identifier="ringerssolution" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1,petfood2,petfood3" useinhealthinterface="true" description="" scale="0.35" impactsoundtag="impact_soft">
         <Upgrade gameversion="0.10.0.0" scale="0.5"/>
-        <PreferredContainer primary="medcab" minamount="6" maxamount="8"/>
-        <PreferredContainer primary="supplycab" minamount="3" maxamount="4" spawnprobability="0.5"/>
+        <!--<PreferredContainer primary="medcab" minamount="6" maxamount="8"/>-->
+        <!--<PreferredContainer primary="supplycab" minamount="3" maxamount="4" spawnprobability="0.5"/>-->
         <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="4" spawnprobability="0.5"/>
 
         <Price baseprice="50">
@@ -115,7 +115,7 @@
 
     <!-- Azathioprine / immunosuppressant -->
     <Item name="" identifier="immunosuppressant" category="Medical" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,surgerytool" description="" useinhealthinterface="true" scale="0.3" impactsoundtag="impact_metal_light" maxstacksize="32" maxstacksizecharacterinventory="8">
-        <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
+        <!--<PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>-->
         <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.1"/>
         <PreferredContainer primary="outposttrashcan" minamount="0" maxamount="2" spawnprobability="0.01"/>
 
@@ -162,7 +162,7 @@
 
     <!-- Thiamine / organ fixer -->
     <Item name="" identifier="thiamine" category="Medical" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical" description="" useinhealthinterface="true" scale="0.2" impactsoundtag="impact_metal_light" maxstacksize="32" maxstacksizecharacterinventory="8">
-        <PreferredContainer primary="medcab" spawnprobability="0.2"/>
+        <!--<PreferredContainer primary="medcab" spawnprobability="0.2"/>-->
         <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.1"/>
         <PreferredContainer primary="outposttrashcan" minamount="0" maxamount="2" spawnprobability="0.01"/>
 
@@ -251,8 +251,8 @@
     <!-- Antibiotic ointment / heals infected wound -->
     <!-- Maybe it's worth moving to Consumables.xml. By: TheManyFacedDemon -->
     <Item name="" identifier="ointment" category="Medical" Tags="smallitem,medical" maxstacksize="32" maxstacksizecharacterinventory="8" useinhealthinterface="true" cargocontaineridentifier="mediccrate" scale="0.265" impactsoundtag="impact_soft">
-        <PreferredContainer primary="medcab" minamount="10" maxamount="16" spawnprobability="1"/>
-        <PreferredContainer primary="supplycab" minamount="1" maxamount="2" spawnprobability="0.1"/>
+        <PreferredContainer primary="medcab" minamount="16" maxamount="24" spawnprobability="1"/>
+        <!--<PreferredContainer primary="supplycab" minamount="1" maxamount="2" spawnprobability="0.1"/>-->
         <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="8" spawnprobability="0.12"/>
         <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="10" spawnprobability="0.25"/>
 

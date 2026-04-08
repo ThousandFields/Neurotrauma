@@ -60,7 +60,7 @@
 
         <!-- Scanner, ID card -->
         <Item name="" identifier="healthscanner" scale="0.27" category="Equipment" tags="smallitem,tool,medical" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" isshootable="true" requireaimtouse="True" useinhealthinterface="True">
-            <PreferredContainer primary="medcab" amount="1" spawnprobability="0.5" notcampaign="true"/>
+            <PreferredContainer primary="medcab" amount="1" spawnprobability="1"/>
 
             <Price baseprice="150" minavailable="1">
                 <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
@@ -199,7 +199,7 @@
             <Upgrade gameversion="0.10.0.0" scale="0.5"/>
             <PreferredContainer secondary="wrecksupplycab,beaconsupplycab" amount="1" spawnprobability="0.1" />
             <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="3" spawnprobability="0.5" />
-            <PreferredContainer primary="medcab" secondary="medcontainer"/>
+            <!--<PreferredContainer primary="medcab" secondary="medcontainer"/>-->
 
             <Price baseprice="50" minavailable="12">
                 <Price storeidentifier="merchantoutpost"/>
@@ -243,7 +243,7 @@
 
         <Item name="" identifier="antibloodloss2" nameidentifier="bloodpackominus" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1,bloodbag" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
             <Upgrade gameversion="0.10.0.0" scale="0.5" />
-            <PreferredContainer primary="medcab" minamount="2" maxamount="3" notcampaign="true"/>
+            <!--<PreferredContainer primary="medcab" minamount="2" maxamount="3" notcampaign="true"/>-->
             <PreferredContainer secondary="outpostmedcab" minamount="1" maxamount="2" spawnprobability="0.2"/>
             <PreferredContainer secondary="outpostmedcompartment" amount="1" spawnprobability="0.05"/>
             <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="2" spawnprobability="0.2" />
@@ -278,7 +278,7 @@
             <PreferredContainer secondary="outpostmedcab" minamount="1" maxamount="3" spawnprobability="0.5" />
             <PreferredContainer secondary="outpostmedcompartment" amount="1" spawnprobability="0.2" />
             <PreferredContainer secondary="researchcontainer" spawnprobability="0.02"/>
-            <PreferredContainer primary="medcab" secondary="medcontainer"/>
+            <PreferredContainer primary="medcab" minamount="24" maxamount="32" spawnprobability="1"/>
 
             <Price baseprice="30" minavailable="25">
                 <Price storeidentifier="merchantoutpost"/>
@@ -565,7 +565,7 @@
         <Item name="" identifier="opium" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,chem,medical" description="" cargocontaineridentifier="mediccrate" scale="0.5" useinhealthinterface="true" RequireAimToUse="True">
             <Upgrade gameversion="0.10.0.0" scale="0.5"/>
             <PreferredContainer secondary="abandonedmedcab,wreckmedcab" minamount="1" maxamount="2" spawnprobability="0.5" />
-            <PreferredContainer primary="medfabcab" secondary="medcontainer"/>
+            <!--<PreferredContainer primary="medfabcab" secondary="medcontainer"/>-->
             <PreferredContainer secondary="outposttrashcan" amount="1" spawnprobability="0.2" />
 
             <Price baseprice="40">
@@ -623,14 +623,14 @@
 
         <Item name="" identifier="antidama1" aliases="Corrigodone" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
             <Upgrade gameversion="0.10.0.0" scale="0.5" />
-            <PreferredContainer secondary="supplycab" minamount="1" maxamount="2" spawnprobability="0.5" notcampaign="true"/>
+            <!--<PreferredContainer secondary="supplycab" minamount="1" maxamount="2" spawnprobability="0.5" notcampaign="true"/>-->
             <PreferredContainer secondary="wrecksupplycab,beaconsupplycab" amount="1" spawnprobability="0.2" />
             <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.3" />
             <PreferredContainer secondary="outpostmedcab" minamount="1" maxamount="3" spawnprobability="0.5" />
             <PreferredContainer secondary="outpostmedcompartment" amount="1" spawnprobability="0.2" />
             <PreferredContainer secondary="outposttrashcan" amount="1" spawnprobability="0.1" />
             <PreferredContainer secondary="researchcontainer" spawnprobability="0.02"/>
-            <PreferredContainer primary="medcab" secondary="medcontainer"/>
+            <PreferredContainer primary="medcab" secondary="medcontainer" minamount="12" maxamount="16"/>
 
             <Price baseprice="100" minavailable="12">
                 <Price storeidentifier="merchantoutpost"/>
@@ -707,7 +707,7 @@
 
         <Item name="" identifier="antidama2" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
             <Upgrade gameversion="0.10.0.0" scale="0.5" />
-            <PreferredContainer primary="medcab" secondary="medcontainer"/>
+            <!--<PreferredContainer primary="medcab" secondary="medcontainer"/>-->
             <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.4" />
             <PreferredContainer secondary="outpostmedcab" minamount="1" maxamount="3" spawnprobability="0.3" />
             <PreferredContainer secondary="outpostmedcompartment" amount="1" spawnprobability="0.1" />
@@ -794,7 +794,7 @@
             <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.2" />
             <PreferredContainer secondary="outpostmedcab" amount="1" spawnprobability="0.5" />
             <PreferredContainer secondary="outpostmedcompartment" amount="1" spawnprobability="0.2" />
-            <PreferredContainer primary="medcab" secondary="medcontainer"/>
+            <!--<PreferredContainer primary="medcab" secondary="medcontainer"/>-->
 
             <Price baseprice="100" minavailable="2">
                 <Price storeidentifier="merchantmedical" multiplier="0.9"/>
@@ -858,7 +858,7 @@
         <Item name="" identifier="antibiotics" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,chem,medical,syringe" description="" cargocontaineridentifier="mediccrate" scale="0.5" useinhealthinterface="true" RequireAimToUse="True">
             <Upgrade gameversion="0.10.0.0" scale="0.5" />
             <PreferredContainer secondary="abandonedmedcab,wreckmedcab" minamount="0" maxamount="2" spawnprobability="0.5" />
-            <PreferredContainer primary="medfabcab" secondary="medcontainer"/>
+            <PreferredContainer primary="medcab" minamount="8" maxamount="12"/>
 
             <Price baseprice="60">
                 <Price storeidentifier="merchantoutpost" minavailable="6" />
@@ -924,7 +924,7 @@
 
         <Item name="" identifier="adrenaline" category="Medical,Material" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
             <Upgrade gameversion="0.10.0.0" scale="0.5" />
-            <PreferredContainer primary="medfabcab" secondary="medcontainer"/>
+            <!--<PreferredContainer primary="medfabcab" secondary="medcontainer"/>-->
             <PreferredContainer secondary="abandonedmedcab,wreckmedcab" minamount="1" maxamount="2" spawnprobability="0.5" />
             <Price baseprice="60">
                 <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.25" />
@@ -1473,7 +1473,7 @@
             <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.2" />
             <PreferredContainer secondary="outpostmedcab" amount="1" spawnprobability="0.2" />
             <PreferredContainer secondary="outpostmedcompartment" amount="1" spawnprobability="0.06" />
-            <PreferredContainer primary="medcab" secondary="medcontainer"/>
+            <!--<PreferredContainer primary="medcab" secondary="medcontainer"/>-->
 
             <Price baseprice="130" minavailable="4">
                 <Price storeidentifier="merchantoutpost"/>
