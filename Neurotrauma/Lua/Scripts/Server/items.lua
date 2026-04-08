@@ -57,6 +57,86 @@ Hook.Add("NT.runItemMethod", "NT.itemused_manual", function(effect, deltaTime, i
 	end
 end)
 
+Hook.Add("meleeWeapon.handleImpact", "NT.fracturedOnMelee", function(meleeWeapon, target)
+	if meleeWeapon == nil or target == nil then
+		return
+	end
+	local itemUser = meleeWeapon.picker
+	if itemUser == nil then
+		return
+	end
+	local item = meleeWeapon.Item
+	if item == nil then
+		return
+	end
+	Timer.Wait(function()
+		if
+			HF.HasAffliction(itemUser, "ra_fracture", 1)
+			and itemUser.Inventory.IsInLimbSlot(item, 2)
+			and not HF.HasAfflictionLimb(itemUser, "gypsumcast", LimbType.RightArm, 0.1)
+		then
+			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+			item.Drop(itemUser, true)
+			HF.SetAffliction(itemUser, "ra_fracture", 100)
+			HF.SetAfflictionLimb(itemUser, "bleeding", LimbType.RightArm, 70)
+		elseif HF.HasAffliction(itemUser, "dislocation3", 1) and itemUser.Inventory.IsInLimbSlot(item, 2) then
+			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+			item.Drop(itemUser, true)
+			HF.SetAffliction(itemUser, "dislocation3", 100)
+		end
+		if
+			HF.HasAffliction(itemUser, "la_fracture", 1)
+			and itemUser.Inventory.IsInLimbSlot(item, 4)
+			and not HF.HasAfflictionLimb(itemUser, "gypsumcast", LimbType.LeftArm, 0.1)
+		then
+			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+			item.Drop(itemUser, true)
+			HF.SetAffliction(itemUser, "la_fracture", 100)
+			HF.SetAfflictionLimb(itemUser, "bleeding", LimbType.LeftArm, 70)
+		elseif HF.HasAffliction(itemUser, "dislocation4", 1) and itemUser.Inventory.IsInLimbSlot(item, 4) then
+			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+			item.Drop(itemUser, true)
+			HF.SetAffliction(itemUser, "dislocation4", 100)
+		end
+	end, 1)
+end)
+
+Hook.Add("item.use", "NT.fracturedOnShoot", function(item, itemUser, targetLimb)
+	Timer.Wait(function()
+		if item == nil or item.GetComponentString("RangedWeapon") == nil or itemUser == nil then
+			return
+		end
+		if
+			HF.HasAffliction(itemUser, "ra_fracture", 1)
+			and itemUser.Inventory.IsInLimbSlot(item, 2)
+			and not HF.HasAfflictionLimb(itemUser, "gypsumcast", LimbType.RightArm, 0.1)
+		then
+			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+			item.Drop(itemUser, true)
+			HF.SetAffliction(itemUser, "ra_fracture", 100)
+			HF.AddAfflictionLimb(itemUser, "bleeding", LimbType.RightArm, 70)
+		elseif HF.HasAffliction(itemUser, "dislocation3", 1) and itemUser.Inventory.IsInLimbSlot(item, 2) then
+			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+			item.Drop(itemUser, true)
+			HF.SetAffliction(itemUser, "dislocation3", 100)
+		end
+		if
+			HF.HasAffliction(itemUser, "la_fracture", 1)
+			and itemUser.Inventory.IsInLimbSlot(item, 4)
+			and not HF.HasAfflictionLimb(itemUser, "gypsumcast", LimbType.LeftArm, 0.1)
+		then
+			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+			item.Drop(itemUser, true)
+			HF.SetAffliction(itemUser, "la_fracture", 100)
+			HF.AddAfflictionLimb(itemUser, "bleeding", LimbType.LeftArm, 70)
+		elseif HF.HasAffliction(itemUser, "dislocation4", 1) and itemUser.Inventory.IsInLimbSlot(item, 4) then
+			itemUser.Inventory.ForceRemoveFromSlot(item, 0)
+			item.Drop(itemUser, true)
+			HF.SetAffliction(itemUser, "dislocation4", 100)
+		end
+	end, 1)
+end)
+
 -- TODO: some items trigger afflictions after a single human update, to fix, trigger them immediately for consistency
 -- storing all of the item-specific functions in a table
 NT.ItemMethods = {} -- with the identifier as the key
@@ -1381,7 +1461,7 @@ NT.ItemMethods.organscalpel_liver = function(item, usingCharacter, targetCharact
 					}
 
 					local container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.RightHand)
-					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() == true then
+					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() then
 						container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.LeftHand)
 					end
 					if
@@ -1469,7 +1549,7 @@ NT.ItemMethods.organscalpel_lungs = function(item, usingCharacter, targetCharact
 					}
 
 					local container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.RightHand)
-					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() == true then
+					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() then
 						container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.LeftHand)
 					end
 					if
@@ -1556,7 +1636,7 @@ NT.ItemMethods.organscalpel_heart = function(item, usingCharacter, targetCharact
 					}
 
 					local container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.RightHand)
-					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() == true then
+					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() then
 						container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.LeftHand)
 					end
 					if
@@ -1637,7 +1717,7 @@ NT.ItemMethods.organscalpel_kidneys = function(item, usingCharacter, targetChara
 					}
 
 					local container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.RightHand)
-					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() == true then
+					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() then
 						container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.LeftHand)
 					end
 					if
@@ -1687,7 +1767,7 @@ NT.ItemMethods.organscalpel_kidneys = function(item, usingCharacter, targetChara
 					}
 
 					local container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.RightHand)
-					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() == true then
+					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() then
 						container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.LeftHand)
 					end
 					if
@@ -1748,7 +1828,7 @@ NT.ItemMethods.organscalpel_brain = function(item, usingCharacter, targetCharact
 					end
 
 					local container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.RightHand)
-					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() == true then
+					if container == nil or container.OwnInventory == nil or container.OwnInventory.IsFull() then
 						container = usingCharacter.Inventory.GetItemInLimbSlot(InvSlotType.LeftHand)
 					end
 					if SERVER then

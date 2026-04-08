@@ -78,10 +78,18 @@ local function limbLockedInitial(c, limbtype, key)
 				limbtype,
 				"dirtybandage",
 				0
-			) <= 0 and NT.LimbIsDislocated(c.character, limbtype))
+			) <= 0 and NT.LimbIsDislocated(
+				c.character,
+				limbtype,
+				limbtype == LimbType.LeftArm or limbtype == LimbType.RightArm
+			))
 			or (
 				HF.GetAfflictionStrengthLimb(c.character, limbtype, "gypsumcast", 0) <= 0
-				and NT.LimbIsBroken(c.character, limbtype)
+				and NT.LimbIsBroken(
+					c.character,
+					limbtype,
+					limbtype == LimbType.LeftArm or limbtype == LimbType.RightArm
+				)
 			)
 		)
 end
@@ -143,6 +151,14 @@ NT.Afflictions = {
 	la_fracture = {
 		update = function(c, i)
 			if c.afflictions[i].strength > 0 then
+				if c.afflictions[i].strength > 90 and c.afflictions[i].strength < 100 then
+					if
+						HF.HasAfflictionLimb(c.character, "bandaged", LimbType.LeftArm)
+						or HF.HasAfflictionLimb(c.character, "dirtybandage", LimbType.LeftArm)
+					then
+						return
+					end
+				end
 				c.afflictions[i].strength = c.afflictions[i].strength
 					+ 2
 						* HF.BoolToNum(not HF.HasAfflictionLimb(c.character, "gypsumcast", LimbType.LeftArm))
@@ -153,6 +169,14 @@ NT.Afflictions = {
 	ra_fracture = {
 		update = function(c, i)
 			if c.afflictions[i].strength > 0 then
+				if c.afflictions[i].strength > 90 and c.afflictions[i].strength < 100 then
+					if
+						HF.HasAfflictionLimb(c.character, "bandaged", LimbType.RightArm)
+						or HF.HasAfflictionLimb(c.character, "dirtybandage", LimbType.RightArm)
+					then
+						return
+					end
+				end
 				c.afflictions[i].strength = c.afflictions[i].strength
 					+ 2
 						* HF.BoolToNum(not HF.HasAfflictionLimb(c.character, "gypsumcast", LimbType.RightArm))
