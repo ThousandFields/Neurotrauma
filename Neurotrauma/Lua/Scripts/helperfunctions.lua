@@ -119,7 +119,7 @@ function NT.TraumamputateLimb(character, limbtype, attacker)
 	limbtoitem[LimbType.Head] = "headta"
 	-- (optional parameter) if attacker is a monster with free inventory slot, give them the limb instead
 	if limbtoitem[limbtype] ~= nil then
-		if attacker ~= nil and not attacker.IsHuman and attacker.Inventory.IsFull() == false then
+		if attacker ~= nil and not attacker.IsHuman and not attacker.Inventory.IsFull() then
 			HF.GiveItem(attacker, limbtoitem[limbtype])
 			HF.AddAfflictionLimb(character, limbtoaffliction[limbtype] .. "_2", limbtype, 10)
 		else
@@ -155,7 +155,7 @@ function NT.ArteryCutLimb(character, limbtype, strength)
 	HF.AddAffliction(character, limbtoaffliction[limbtype], strength)
 end
 
-function NT.LimbIsDislocated(character, limbtype)
+function NT.LimbIsDislocated(character, limbtype, isarm)
 	local limbtoaffliction = {}
 	limbtoaffliction[LimbType.RightLeg] = "dislocation1"
 	limbtoaffliction[LimbType.LeftLeg] = "dislocation2"
@@ -164,9 +164,13 @@ function NT.LimbIsDislocated(character, limbtype)
 	if limbtoaffliction[limbtype] == nil then
 		return false
 	end
-	return HF.HasAffliction(character, limbtoaffliction[limbtype], 1)
+	if isarm then
+		return HF.HasAffliction(character, limbtoaffliction[limbtype], 100)
+	else
+		return HF.HasAffliction(character, limbtoaffliction[limbtype], 1)
+	end
 end
-function NT.LimbIsBroken(character, limbtype)
+function NT.LimbIsBroken(character, limbtype, isarm)
 	local limbtoaffliction = {}
 	limbtoaffliction[LimbType.RightLeg] = "rl_fracture"
 	limbtoaffliction[LimbType.LeftLeg] = "ll_fracture"
@@ -175,7 +179,11 @@ function NT.LimbIsBroken(character, limbtype)
 	if limbtoaffliction[limbtype] == nil then
 		return false
 	end
-	return HF.HasAffliction(character, limbtoaffliction[limbtype], 1)
+	if isarm then
+		return HF.HasAffliction(character, limbtoaffliction[limbtype], 100)
+	else
+		return HF.HasAffliction(character, limbtoaffliction[limbtype], 1)
+	end
 end
 function NT.LimbIsArterialCut(character, limbtype)
 	local limbtoaffliction = {}
