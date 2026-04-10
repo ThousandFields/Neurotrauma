@@ -78,6 +78,7 @@ Hook.Patch("Barotrauma.HumanAIController", "SpeakAboutIssues", function(instance
 			message = TextManager.Get("npcdialogsym." .. identifier)
 			print(message)
 			character.Speak(message, chatType, math.random(0, 5), Identifier(identifier .. "DialogSym"), 600.0)
+			break
 		end
 	end
 end, Hook.HookMethodType.After)
