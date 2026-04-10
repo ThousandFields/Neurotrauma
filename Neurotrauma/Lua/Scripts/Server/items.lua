@@ -396,6 +396,8 @@ NT.HematologyDetectable = {
 	"afsaline",
 	"afringerssolution",
 	"afpressuredrug",
+	"afopioid",
+	"afanaesthetic",
 }
 NT.ItemMethods.bloodanalyzer = function(item, usingCharacter, targetCharacter, limb)
 	-- only work if no cooldown
@@ -944,6 +946,7 @@ NT.ItemMethods.propofol = function(item, usingCharacter, targetCharacter, limb)
 		HF.AddAffliction(targetCharacter, "anesthesia", anesthesiaGained, usingCharacter)
 	end
 
+	HF.AddAffliction(targetCharacter, "afanaesthetic", 100, usingCharacter)
 	HF.RemoveItem(item)
 	HF.GiveItem(targetCharacter, "ntsfx_syringe")
 end

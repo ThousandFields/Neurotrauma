@@ -3992,6 +3992,42 @@ thats what the vomiting symptom is for -->
     <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="3,1" sheetelementsize="128,128" color="10,193,114,255" origin="0,0"/>
   </Affliction>
 
+  <!-- Opioid / Opioid conditions
+  Invisible Status -->
+  <Affliction
+    name=""
+    identifier="afopioid"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    type="gaze"
+    isbuff="true"
+    limbspecific="false"
+    maxstrength="200"
+    showinhealthscannerthreshold="700"
+    showiconthreshold="700">
+    <Effect minstrength="0" maxstrength="200" strengthchange="-0.3"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <!-- Propofol / propofol conditions
+  Invisible Status -->
+  <Affliction
+    name=""
+    identifier="afanaesthetic"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    type="gaze"
+    isbuff="true"
+    limbspecific="false"
+    maxstrength="100"
+    showinhealthscannerthreshold="700"
+    showiconthreshold="700">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-0.3"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
   <!-- Table / Proper surgery conditions
   Invisible Status -->
   <Affliction

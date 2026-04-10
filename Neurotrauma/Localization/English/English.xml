@@ -634,6 +634,12 @@ Can give blood to: AB+</entitydescription.abpluscard>
 <afflictionname.afantibiotics>Antibiotics</afflictionname.afantibiotics>
 <afflictiondescription.afantibiotics></afflictiondescription.afantibiotics>
 
+<afflictionname.afanaesthetic>Anaesthetics</afflictionname.afanaesthetic>
+<afflictiondescription.afanaesthetic></afflictiondescription.afanaesthetic>
+
+<afflictionname.afopioid>Opioids</afflictionname.afopioid>
+<afflictiondescription.afopioid></afflictiondescription.afopioid>
+
 <afflictionname.afimmunosuppressant>Immunosuppressants</afflictionname.afimmunosuppressant>
 <afflictiondescription.afimmunosuppressant></afflictiondescription.afimmunosuppressant>
 
