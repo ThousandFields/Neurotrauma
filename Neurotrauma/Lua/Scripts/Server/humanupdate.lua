@@ -939,6 +939,8 @@ NT.Afflictions = {
 	afringerssolution = {},
 	afstreptokinase = {},
 	afmannitol = {},
+	afanaesthetic = {},
+	afopioid = {},
 	afpressuredrug = {
 		update = function(c, i)
 			c.afflictions[i].strength = c.afflictions[i].strength - 0.25 * NT.Deltatime
@@ -1092,8 +1094,8 @@ NT.Afflictions = {
 					and c.afflictions.respiratoryarrest.strength < 1
 					and (
 						NTC.GetSymptom(c.character, i)
-						or c.afflictions.analgesia.strength > 20
-						or c.afflictions.anesthesia.strength > 40
+						or c.afflictions.afopioid.strength > 1
+						or c.afflictions.afanaesthetic.strength > 1
 						or c.afflictions.opiateoverdose.strength > 30
 					),
 				2
