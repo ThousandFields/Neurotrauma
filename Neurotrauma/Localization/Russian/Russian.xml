@@ -775,7 +775,8 @@
 
 <!-- misc -->
 <roomname.surgical>Операционная</roomname.surgical>
-
+<ItemMsgPutInsideSelectKey>[[select]] Засунуть внутрь</ItemMsgPutInsideSelectKey>
+<ItemMsgTakeOutSelectKey>[[select]] Высунуть</ItemMsgTakeOutSelectKey>
 
 <!-- A1.7h1 -->
 
