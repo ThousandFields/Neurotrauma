@@ -135,6 +135,8 @@ NT.Afflictions = {
 				or c.afflictions.brainremoved.strength > 0
 				or c.afflictions.cerebralhypoxia.strength > 100
 				or c.afflictions.coma.strength > 15
+				or c.character.Vitality <= 0
+				or c.afflictions.hypoxemia.strength > 80
 				or c.afflictions.t_arterialcut.strength > 0
 				or c.afflictions.seizure.strength > 0.1
 				or c.afflictions.opiateoverdose.strength > 60
