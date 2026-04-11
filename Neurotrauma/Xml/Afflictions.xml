@@ -1389,7 +1389,7 @@
     </PeriodicEffect>
 
     <PeriodicEffect mininterval="20" maxinterval="50">
-      <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" comparison="And">
+      <StatusEffect target="Character" targetlimbs="Head" multiplyafflictionsbymaxvitality="true" comparison="And">
         <Conditional bandaged="lte 1"/>
         <Conditional n_fracture="gte 100"/>
         <Affliction identifier="t_paralysis" amount="5" />
