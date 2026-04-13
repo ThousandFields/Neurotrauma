@@ -1212,10 +1212,12 @@
             <PreferredContainer secondary="outpostmedcompartment" amount="2" spawnprobability="0.05" />
 
             <Price baseprice="80">
+                <Price storeidentifier="merchantoutpost" multiplier="1.4" minavailable="5"/>
+                <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="10"/>
                 <Price storeidentifier="merchantmedical" multiplier="0.9" minavailable="10" minleveldifficulty="25" />
             </Price>
 
-            <Fabricate suitablefabricators="medicalfabricator" requiredtime="45" amount="8">
+            <Fabricate suitablefabricators="medicalfabricator" requiredtime="25" amount="4">
                 <RequiredSkill identifier="medical" level="48" />
                 <RequiredItem identifier="stabilozine" amount="1" />
                 <RequiredItem identifier="antibiotics" amount="2" />
