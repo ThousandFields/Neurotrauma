@@ -450,7 +450,7 @@ NT.Afflictions = {
 					* NTConfig.Get("NT_neurotraumaGain", 1) -- Config multiplier
 					* (1 - HF.Clamp(c.afflictions.afmannitol.strength, 0, 0.5)) -- half if mannitol
 			elseif gain < -0.8 then
-					gain = gain * 2.5
+				gain = gain * 2.5
 			end
 
 			c.afflictions[i].strength = c.afflictions[i].strength + gain
@@ -812,12 +812,20 @@ NT.Afflictions = {
 			if c.stats.stasis then
 				return
 			end
-			c.afflictions[i].strength = c.afflictions[i].strength - NT.Deltatime / 5
-
+			if
+				c.afflictions.acidosis.strength < 20
+				and c.afflictions.alkalosis.strength < 20
+				and c.afflictions.heartdamage.strength < 30
+				and c.afflictions.lungdamage.strength < 40
+				and c.stats.availableoxygen == 100
+			then
+				c.afflictions[i].strength = c.afflictions[i].strength - NT.Deltatime / 2
+			else
+				c.afflictions[i].strength = c.afflictions[i].strength - NT.Deltatime / 5
+			end
 			-- triggers
 			if
 				not NTC.GetSymptomFalse(c.character, "triggersym_coma")
-				and not c.stats.stasis
 				and (
 					NTC.GetSymptom(c.character, "triggersym_coma")
 					or (c.afflictions.cardiacarrest.strength > 1 and HF.Chance(0.05))
