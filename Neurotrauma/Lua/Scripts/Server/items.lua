@@ -380,6 +380,7 @@ end
 NT.CuttableAfflictions = {
 	"bandaged",
 	"dirtybandage",
+	"arteriesclamp",
 }
 
 NT.TraumashearsAfflictions = {
@@ -630,17 +631,14 @@ NT.ItemMethods.tourniquet = function(item, usingCharacter, targetCharacter, limb
 		HF.GetSkillRequirementMet(usingCharacter, "medical", 30)
 		and not HF.HasAfflictionLimb(targetCharacter, "arteriesclamp", limbtype, 1)
 	then
-		if NT.LimbIsArterialCut(targetCharacter, limbtype) then
-			if HF.LimbIsExtremity(limbtype) then
-				HF.SetAfflictionLimb(targetCharacter, "arteriesclamp", limbtype, 100, usingCharacter)
-				HF.GiveSkillScaled(usingCharacter, "medical", 6000)
-			elseif limbtype == LimbType.Head then
-				HF.SetAffliction(targetCharacter, "oxygenlow", 200, usingCharacter)
-				HF.AddAffliction(targetCharacter, "cerebralhypoxia", 15, usingCharacter)
-			end
-
-			HF.RemoveItem(item)
+		if HF.LimbIsExtremity(limbtype) then
+			HF.SetAfflictionLimb(targetCharacter, "arteriesclamp", limbtype, 100, usingCharacter)
+		elseif limbtype == LimbType.Head then
+			HF.SetAffliction(targetCharacter, "oxygenlow", 200, usingCharacter)
+			HF.AddAffliction(targetCharacter, "cerebralhypoxia", 15, usingCharacter)
 		end
+
+		HF.RemoveItem(item)
 	else
 		HF.AddAfflictionLimb(targetCharacter, "blunttrauma", limbtype, 6, usingCharacter)
 	end
