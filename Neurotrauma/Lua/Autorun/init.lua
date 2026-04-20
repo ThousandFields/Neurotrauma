@@ -40,9 +40,7 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
 
 			-- No expansions
 			runstring = runstring .. "\n"
-			if not hasAddons then
-				runstring = runstring .. "- Not running any expansions\n"
-			end
+			if not hasAddons then runstring = runstring .. "- Not running any expansions\n" end
 
 			print(runstring)
 		end, 1)
@@ -51,6 +49,7 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
 	dofile(NT.Path .. "/Lua/Scripts/Server/characterpatches.lua")
 
 	dofile(NT.Path .. "/Lua/Scripts/Server/ntcompat.lua")
+	dofile(NT.Path .. "/Lua/Scripts/Server/dynamicitems.lua")
 	dofile(NT.Path .. "/Lua/Scripts/Server/blood.lua")
 	dofile(NT.Path .. "/Lua/Scripts/Server/humanupdate.lua")
 	dofile(NT.Path .. "/Lua/Scripts/Server/ondamaged.lua")
@@ -71,17 +70,13 @@ end
 -- server-side code only
 if SERVER then
 	Networking.Receive("NT.ConfigUpdate", function(msg, sender)
-		if not sender.HasPermission(ClientPermissions.ManageSettings) then
-			return
-		end
+		if not sender.HasPermission(ClientPermissions.ManageSettings) then return end
 		NTConfig.ReceiveConfig(msg)
 		NTConfig.SaveConfig()
 	end)
 
 	Networking.Receive("NT.ConfigRequest", function(msg, sender)
-		if not sender then
-			return
-		end
+		if not sender then return end
 		NTConfig.SendConfig(sender)
 	end)
 end
@@ -89,6 +84,7 @@ end
 -- client-side code
 if CLIENT then
 	dofile(NT.Path .. "/Lua/Scripts/Client/configgui.lua")
+	dofile(NT.Path .. "/Lua/Scripts/Client/dynamicitems.lua")
 end
 
 -- Shared and singleplayer code
