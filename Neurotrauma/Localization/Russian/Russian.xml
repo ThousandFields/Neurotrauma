@@ -143,7 +143,7 @@
 <entitydescription.tourniquet>Устройство для пережатия кровотока к части тела. Обычно используется при обильных кровотечениях из конечностей. Не рекомендуется применять к голове.</entitydescription.tourniquet>
 
 <entityname.drainage>Дренаж</entityname.drainage>
-<entitydescription.drainage>Система для устранения воздуха из плевральной полости при пневмотораксе.</entitydescription.drainage>
+<entitydescription.drainage>Система для устранения воздуха из плевральной полости при пневмотораксе и для устранения жидкости при сердечной тампонаде.</entitydescription.drainage>
 
 <entityname.needle>Игла</entityname.needle>
 <entitydescription.needle>Игла с декомпрессионным клапаном для удаления жидкости или воздуха из плевральной полости или перикарда.</entitydescription.needle>

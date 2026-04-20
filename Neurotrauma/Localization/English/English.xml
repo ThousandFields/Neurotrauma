@@ -150,7 +150,7 @@
 <entitydescription.tourniquet>A device that applies pressure to a limb and thus reduces bloodflow. It is usually used in case of major bleeders on extremities. Shouldn't be used on the head.</entitydescription.tourniquet>
 
 <entityname.drainage>Drainage</entityname.drainage>
-<entitydescription.drainage>Drains air from the pleural cavity during corrective surgery for pneumothorax.</entitydescription.drainage>
+<entitydescription.drainage>Drains air from the pleural cavity during corrective surgery for pneumothorax and cardiac tamponade.</entitydescription.drainage>
 
 <entityname.needle>Needle</entityname.needle>
 <entitydescription.needle>A needle with a decompression valve to make the air or liquid drain out of the pleural cavity or pericardium</entitydescription.needle>
