@@ -185,8 +185,6 @@ function NTC.AddDrainageAffliction(identifier)
 end
 
 NTC.AfflictionsAffectingVitality = {
-	bleeding = true,
-	bleedingnonstop = true,
 	burn = true,
 	acidburn = true,
 	lacerations = true,

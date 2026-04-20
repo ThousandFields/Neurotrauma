@@ -5582,6 +5582,56 @@ thats what the vomiting symptom is for -->
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,640,128,128" color="195,0,0,255" origin="0,0" />
   </Burning>
   <!-- Vanilla affliction override end -->
+  <!-- Vanilla affliction override start -->
+  <Bleeding
+    identifier="bleeding"
+    type="bleeding"
+    causeofdeathdescription="Bled to death"
+    selfcauseofdeathdescription="You have bled to death."
+    limbspecific="true"
+    maxstrength="100"
+    karmachangeonapplied="-1"
+    healcostmultiplier="2.5"
+    WeaponsSkillGain="1.0">
+    <Description
+      textidentifier="afflictiondescription.bleeding.low"
+      minstrength="0"
+      maxstrength="20"/>
+    <Description
+      textidentifier="afflictiondescription.bleeding"
+      minstrength="20"
+      maxstrength="60"/>
+    <Description
+      textidentifier="afflictiondescription.bleeding.high"
+      minstrength="60"
+      maxstrength="100"/>
+    <!-- Strength 0-20 -->
+    <Effect minstrength="0" maxstrength="100"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="0"
+      strengthchange="0"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
+  </Bleeding>
+  <!-- Vanilla affliction override end -->
+  <!-- Vanilla affliction override start -->
+  <Bleeding
+    name="Bleeding"
+    identifier="bleedingnonstop"
+    translationoverride="bleeding"
+    description="Blood pours freely from this ragged and particularly nasty open wound"
+    type="bleeding"
+    causeofdeathdescription="Bled to death"
+    selfcauseofdeathdescription="You have bled to death."
+    limbspecific="true"
+    maxstrength="100"
+    karmachangeonapplied="-1">
+    <Effect minstrength="0" maxstrength="100"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="0"
+      strengthchange="0"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
+  </Bleeding>
+  <!-- Vanilla affliction override end -->
   <!-- /// Override section ends /// -->
 
 </Afflictions>
