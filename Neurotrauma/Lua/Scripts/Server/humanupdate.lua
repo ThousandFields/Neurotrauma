@@ -789,7 +789,7 @@ NT.Afflictions = {
 				and c.afflictions.alkalosis.strength < 20
 				and c.afflictions.heartdamage.strength < 30
 				and c.afflictions.lungdamage.strength < 40
-				and c.stats.availableoxygen == 100
+				and c.stats.availableoxygen > 70
 			then
 				c.afflictions[i].strength = c.afflictions[i].strength - NT.Deltatime / 2
 			else
