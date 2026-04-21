@@ -453,7 +453,7 @@ NT.Afflictions = {
 					* NTC.GetMultiplier(c.character, "neurotraumagain") -- NTC multiplier
 					* NTConfig.Get("NT_neurotraumaGain", 1) -- Config multiplier
 					* (1 - HF.Clamp(c.afflictions.afmannitol.strength, 0, 0.5)) -- half if mannitol
-			elseif gain < -0.8 then
+			elseif gain < -0.08 then
 				gain = gain * 2.5
 			end
 
