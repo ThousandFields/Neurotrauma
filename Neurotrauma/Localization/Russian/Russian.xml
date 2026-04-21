@@ -40,6 +40,9 @@
 
 <entityname.toxfilter>Фильтр любых ядов</entityname.toxfilter>
 <entitydescription.toxfilter>Улучшенный кровеносный фильтр для установки в хирургический стол, который постепенно удаляет любой яд из кровотока пациента.</entitydescription.toxfilter>
+  
+<itemmsgmodifytable>[[attack]] Взаимодействие</itemmsgmodifytable>
+<operatingtabellabel>Улучшения операционного стола</operatingtabellabel>
 
 <entityname.healthscanner>Сканер здоровья</entityname.healthscanner>
 <entitydescription.healthscanner>Используется для выявления скрытых причин симптомов</entitydescription.healthscanner>
@@ -48,7 +51,6 @@
 <!--<emergencysuitequipconfirmation>После надевания вы не сможете двигаться. Вы уверены?</emergencysuitequipconfirmation>-->
 
 <!-- /// Хирургия /// -->
-
 <entityname.advscalpel>Скальпель</entityname.advscalpel>
 <entitydescription.advscalpel>Операционный инструмент, используемый для создания надрезов.</entitydescription.advscalpel>
 
@@ -103,13 +105,7 @@
 <multiscalpel.heart>Активный режим: Извлечь сердце</multiscalpel.heart>
 <multiscalpel.brain>Активный режим: Извлечь мозг</multiscalpel.brain>
 <multiscalpel.bandage>Активный режим: Снять повязку или гипсовый слепок, зловредная практика.</multiscalpel.bandage>
-<multiscalpel.speedflex>Активный режим: Адаптивные пересадка и извлечение органов.
-Применение на вскрытой голове - мозг. 
-Для манипуляции с остальными органами нужно вскрыть торс, затем применить на часть: 
-Левая рука - почки, 
-Торс - печень, 
-Правая рука - сердце, 
-Левая нога - легкие.</multiscalpel.speedflex>
+<multiscalpel.speedflex>Активный режим: Адаптивные пересадка и извлечение органов. Применение на вскрытой голове - мозг. Для манипуляции с остальными органами нужно вскрыть торс, затем применить на часть: Левая рука - почки, Торс - печень, Правая рука - сердце, Левая нога - легкие.</multiscalpel.speedflex>
 
 <multiscalpel.btn.incision>Надрез</multiscalpel.btn.incision>
 <multiscalpel.btn.kidneys>Почки</multiscalpel.btn.kidneys>
@@ -120,12 +116,23 @@
 <multiscalpel.btn.bandage>Повязки, гипсовые слепки, небрежная практика</multiscalpel.btn.bandage>
 <multiscalpel.btn.speedflex>Адаптивные пересадка и извлечение органов</multiscalpel.btn.speedflex>
 
+
+
 <!-- /// Средства /// -->
 <entityname.mannitol>Маннитол</entityname.mannitol>
 <entitydescription.mannitol>Тип сахарного спирта. Используется для облегчения восстановления от нейротравм. Может нанести урон органам.</entitydescription.mannitol>
 
+<entityname.streptokinase>Стрептокиназа</entityname.streptokinase>
+<entitydescription.streptokinase>Тромболитический фермент, разжижающий сгустки крови. Применяется для лечения сердечных приступов. Ухудшает свёртываемость крови</entitydescription.streptokinase>
+
 <entityname.immunosuppressant>Азатиоприн</entityname.immunosuppressant>
 <entitydescription.immunosuppressant>Иммунодепрессант для профилактики отторжения органов.</entitydescription.immunosuppressant>
+
+<entityname.thiamine>Тиамин</entityname.thiamine>
+<entitydescription.thiamine>Так же известный как витамин B1, этот препарат способствуют восстановлению органов</entitydescription.thiamine>
+
+<entityname.pressuremeds>Нитропруссид натрия</entityname.pressuremeds>
+<entitydescription.pressuremeds>Препарат, применяющийся для снижения артериального давления.</entitydescription.pressuremeds>
 
 <entityname.ointment>Антибиотическая мазь</entityname.ointment>
 <entitydescription.ointment>Мазь с мощными антибиотическими свойствами, убивает и защищает от бактерий.</entitydescription.ointment>
@@ -199,6 +206,7 @@
 <entityname.bloodpackabminus>Пакет с кровью AB-</entityname.bloodpackabminus>
 <entitydescription.bloodpackabminus>Можно переливать: AB-, AB+</entitydescription.bloodpackabminus>
 
+
 <entityname.antibloodloss2>Пакет с кровью O-</entityname.antibloodloss2>
 <entitydescription.antibloodloss2>Пакет с кровью, подходящей любому пациенту.</entitydescription.antibloodloss2>
 
@@ -249,6 +257,9 @@
 
 <entityname.organcrate>Холодильный ящик</entityname.organcrate>
 <entitydescription.organcrate>Место для хранения ваших драгоценных и готовых к трансплантации органов.</entitydescription.organcrate>
+
+<entityname.medstartercrate>Стартовый медицинский набор</entityname.medstartercrate>
+<entitydescription.medstartercrate>Ящик, в котором есть всё необходимое, и легко собираемый единственным крафтом</entitydescription.medstartercrate>
 
 <entityname.organtoolbox>Холодильный контейнер</entityname.organtoolbox>
 <entitydescription.organtoolbox>Место для хранения ваших драгоценных и готовых к трансплантации органов.</entitydescription.organtoolbox>
@@ -478,10 +489,22 @@
 <!-- /// Хирургия и связанное /// -->
 
 <afflictionname.surgeryincision>Хирургический надрез</afflictionname.surgeryincision>
-<afflictiondescription.surgeryincision>Сделанный скальпелем разрез.</afflictiondescription.surgeryincision>
+<afflictiondescription.surgeryincision>Пациент вскрыт.</afflictiondescription.surgeryincision>
 
 <afflictionname.clampedbleeders>Прижатое кровотечение</afflictionname.clampedbleeders>
 <afflictiondescription.clampedbleeders>Хирургическое кровотечение сдержано.</afflictiondescription.clampedbleeders>
+
+<afflictionname.retractedskin>Расширитель</afflictionname.retractedskin>
+<afflictiondescription.retractedskin>Кожа удерживается открытой при помощи расширителя.</afflictiondescription.retractedskin>
+
+<afflictionname.drilledbones>Просверленные кости</afflictionname.drilledbones>
+<afflictiondescription.drilledbones>Кости подготовлены к ортопедическим операциям.</afflictiondescription.drilledbones>
+
+<afflictionname.suturedi>Зашитый надрез</afflictionname.suturedi>
+<afflictiondescription.suturedi>Надрез закрыт швами.</afflictiondescription.suturedi>
+
+<afflictionname.bonecut>Кость распилена</afflictionname.bonecut>
+<afflictiondescription.bonecut>Кость отделена.</afflictiondescription.bonecut>
 
 <afflictionname.arteriesclamp>Сжатые артерии</afflictionname.arteriesclamp>
 <afflictiondescription.arteriesclamp>Артериальное кровотечение остановлено, приток крови к конечности значительно снизился</afflictiondescription.arteriesclamp>
@@ -602,6 +625,15 @@
 <afflictionname.afadrenaline>Адреналин</afflictionname.afadrenaline>
 <afflictiondescription.afadrenaline></afflictiondescription.afadrenaline>
 
+<afflictionname.afstreptokinase>Разжижение тромбов</afflictionname.afstreptokinase>
+<afflictiondescription.afstreptokinase></afflictiondescription.afstreptokinase>
+
+<afflictionname.afthiamine>Тиамин</afflictionname.afthiamine>
+<afflictiondescription.afthiamine></afflictiondescription.afthiamine>
+
+<afflictionname.afpressuredrug>Понижающее давление лекарство</afflictionname.afpressuredrug>
+<afflictiondescription.afpressuredrug></afflictiondescription.afpressuredrug>
+
 <afflictionname.afsaline>Физраствор</afflictionname.afsaline>
 <afflictiondescription.afsaline></afflictiondescription.afsaline>
 
@@ -611,14 +643,14 @@
 <afflictionname.afmannitol>Маннитол</afflictionname.afmannitol>
 <afflictiondescription.afmannitol></afflictiondescription.afmannitol>
 
+<afflictionname.afantibiotics>Антибиотики</afflictionname.afantibiotics>
+<afflictiondescription.afantibiotics></afflictiondescription.afantibiotics>
+
 <afflictionname.afanaesthetic>Анестетик</afflictionname.afanaesthetic>
 <afflictiondescription.afanaesthetic></afflictiondescription.afanaesthetic>
 
 <afflictionname.afopioid>Опиоиды</afflictionname.afopioid>
 <afflictiondescription.afopioid></afflictiondescription.afopioid>
-
-<afflictionname.afantibiotics>Антибиотики</afflictionname.afantibiotics>
-<afflictiondescription.afantibiotics></afflictiondescription.afantibiotics>
 
 <afflictionname.afimmunosuppressant>Иммунодепрессанты</afflictionname.afimmunosuppressant>
 <afflictiondescription.afimmunosuppressant>Иммунитет подавляется иммунодепресантами</afflictiondescription.afimmunosuppressant>
@@ -718,6 +750,9 @@
 <afflictionname.luabotomy>Без Lua</afflictionname.luabotomy>
 <afflictiondescription.luabotomy>Lua не работает. Это значит, что Neurotrauma и прочие модификации, использующие Lua, не будут функционировать. Для инструкции по установке прочитайте страницу в Мастерской для Lua for Barotrauma.</afflictiondescription.luabotomy>
 
+<afflictionname.modconflict>Конфликт модов</afflictionname.modconflict>
+<afflictiondescription.modconflict>Обнаружен конфликт модов. Другой мод перезаписывает те же некоторые предметы что и Neurotrauma. Некоторые функции, возможно, будут работать некорректно. Пожалуйста, исправьте порядок списка ваших модов.</afflictiondescription.modconflict>
+
 <afflictionname.tshocktimeout>Иммунитет к травматическому шоку</afflictionname.tshocktimeout>
 <afflictiondescription.tshocktimeout>Пациента оставили без присмотра, на некоторое время он не будет осознавать о том, что он вскрыт.</afflictiondescription.tshocktimeout>
 
@@ -737,28 +772,7 @@
 <afflictionname.burn_deg3>Ожог третьей степени</afflictionname.burn_deg3>
 <afflictiondescription.burn_deg3>Кожа погрубела и потеряла чувствительность</afflictiondescription.burn_deg3>
 
-<!-- /// Хирургия /// -->
-
-<afflictionname.surgeryincision>Хирургический надрез</afflictionname.surgeryincision>
-<afflictiondescription.surgeryincision>Пациент вскрыт.</afflictiondescription.surgeryincision>
-
-<afflictionname.clampedbleeders>Прижатое кровотечение</afflictionname.clampedbleeders>
-<afflictiondescription.clampedbleeders>Хирургическое кровотечение сдержано.</afflictiondescription.clampedbleeders>
-
-<afflictionname.retractedskin>Расширитель</afflictionname.retractedskin>
-<afflictiondescription.retractedskin>Кожа удерживается открытой при помощи расширителя.</afflictiondescription.retractedskin>
-
-<afflictionname.drilledbones>Просверленные кости</afflictionname.drilledbones>
-<afflictiondescription.drilledbones>Кости подготовлены к ортопедическим операциям.</afflictiondescription.drilledbones>
-
-<afflictionname.suturedi>Зашитый надрез</afflictionname.suturedi>
-<afflictiondescription.suturedi>Надрез закрыт швами.</afflictiondescription.suturedi>
-
-<afflictionname.bonecut>Кость распилена</afflictionname.bonecut>
-<afflictiondescription.bonecut>Кость отделена.</afflictiondescription.bonecut>
-
-<!-- connections -->
-
+<!-- /// Сигналы /// -->
 <connection.aliveout>Жив</connection.aliveout>
 <connection.consciousout>В сознании</connection.consciousout>
 <connection.nameout>Имя_пациента</connection.nameout>
@@ -778,26 +792,8 @@
 <ItemMsgPutInsideSelectKey>[[select]] Засунуть внутрь</ItemMsgPutInsideSelectKey>
 <ItemMsgTakeOutSelectKey>[[select]] Высунуть</ItemMsgTakeOutSelectKey>
 
-<!-- A1.7h1 -->
-
-<entityname.streptokinase>Стрептокиназа</entityname.streptokinase>
-<entitydescription.streptokinase>Тромболитический фермент, разжижающий сгустки крови. Применяется для лечения сердечных приступов. Ухудшает свёртываемость крови</entitydescription.streptokinase>
-
-<entityname.thiamine>Тиамин</entityname.thiamine>
-<entitydescription.thiamine>Так же известный как витамин B1, этот препарат способствуют восстановлению органов</entitydescription.thiamine>
-
-<afflictionname.afstreptokinase>Разжижение тромбов</afflictionname.afstreptokinase>
-<afflictiondescription.afstreptokinase></afflictiondescription.afstreptokinase>
-
-<afflictionname.afthiamine>Тиамин</afflictionname.afthiamine>
-<afflictiondescription.afthiamine></afflictiondescription.afthiamine>
-
-<!-- A1.8 -->
-<entityname.pressuremeds>Нитропруссид натрия</entityname.pressuremeds>
-<entitydescription.pressuremeds>Препарат, применяющийся для снижения артериального давления.</entitydescription.pressuremeds>
-
-<entityname.medstartercrate>Стартовый медицинский набор</entityname.medstartercrate>
-<entitydescription.medstartercrate>Ящик, в котором есть всё необходимое, и легко собираемый единственным крафтом</entitydescription.medstartercrate>
+<!-- Talents -->
+<talentdescription.itemgiveslessaffliction>Применение ‖color:gui.orange‖Инопланетной крови‖end‖ дает на [amount]% меньше ‖color:gui.orange‖Психоза‖end‖ и на ‖color:gui.green‖90%‖end‖ меньше ‖color:gui.orange‖Гемотрансфузионного Шока‖end‖.</talentdescription.itemgiveslessaffliction>
 
 <!-- /// Loading Screen Tips /// -->
 
@@ -805,9 +801,7 @@
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Горите? Водолазный скафандр может оказаться ближе, чем балласт или огнетушитель.</loadingscreentip>
 
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Если Вы не можете безопасно вправить вывих, бинт сможет вернуть подвижность конечности.</loadingscreentip>
-
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Анальгезия не ограничена использованием перед операцией. Обезболивание увеличивает сопротивляемость к урону и оглушению.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Морфин не ограничен использованием перед операцией. Анальгезия увеличивает сопротивляемость к урону и оглушению.</loadingscreentip>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Автоматизированный внешний дефибриллятор всегда сбрасывает фибрилляцию независимо от подготовки.</loadingscreentip>
 
@@ -815,9 +809,9 @@
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Жидкий кислородит предотвращает потерю сознания, вызванную гипоксемией.</loadingscreentip>
 
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Не забывайте о своей конечности после того, как она травматически ампутируется.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Не забывайте о своей конечности после того, как она травматически ампутируется. Заберите её у трупа монстра, который её откусил.</loadingscreentip>
 
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Повреждение почек и печени может вызвать нейротравму.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Повреждение почек и печени может вызвать нейротравму. Хорошие докторы держат с собой запасные органы</loadingscreentip>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Для полной диагностики не забывайте проверять интерфейс здоровья, показания со сканера здоровья или гематологического анализатора.</loadingscreentip>
 
@@ -829,15 +823,17 @@
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Присмотритесь на свои визуальные эффекты на экране. Можно произвести раннюю диагностику по текущей ситуации.</loadingscreentip>
 
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Перелом шеи может вызвать повреждение позвоночного столба до того, как он появится в Интерфейсе Здоровья.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Перевязка перелома шеи предотвращает её от повреждения позвоночного столба.</loadingscreentip>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ АвтоПульс всегда лучше сердечно-легочной реанимации вручную, и их эффекты не складываются.</loadingscreentip>
 
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Гипоксемия это недостаток кислорода в крови. Не путать с гипоксией, которая является недостатком кислорода (в лёгких).</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Гипоксемия это недостаток кислорода в крови. Не путать с гипоксией, которая является недостатком кислорода в легких.</loadingscreentip>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Маннитол лечит нейротравму только тогда, когда кровяное давление выше 70% и гипоксемия ниже 30%. В ином случае препарат замедлит прогрессию нейротравмы.</loadingscreentip>
 
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Боты не предупреждают о своем состоянии здоровья. Своевременно проверяйте их.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Естественная регенерация Нейротравмы может быть быстрее, если пациент имеет менее чем 20% от силы аффликтов, вызывающих её. Держите пациента абсолютно здоровым, если Вы хотите что бы он восстанавливался быстрее!</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Боты иногда предупреждают о своем состоянии здоровья. Своевременно проверяйте их.</loadingscreentip>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Вы можете использовать полустерильный пинцет через открытые огнестрельные раны и глубокие повреждения тканей, но это также вызовет незначительный травматический шок.</loadingscreentip>
 
@@ -867,9 +863,9 @@
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Вывихи очень часто случаются из-за попадания под взрыв.</loadingscreentip>
 
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Вероятность получения большинства состояний, таких как переломы или сердечной тампонады, зависит от полученного урона. Если вы получаете меньше урона, вам нужно меньше врачебного ухода.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Вероятность получения большинства состояний при попаданиях, таких как переломы или сердечной тампонады, зависит от полученного урона. Если вы получаете меньше урона, вам нужно меньше врачебного ухода.</loadingscreentip>
 
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Мало гипса? Все конечности могут быть переработаны на кальций.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Мало гипса? Все конечности и люди могут быть переработаны на кальций.</loadingscreentip>
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Химическая и опиатная ломка никогда не летальна, но алкогольная ломка может доставить проблемы.</loadingscreentip>
 
@@ -879,7 +875,41 @@
 
 <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Некоторые симптомы берут вверх друг друга. Вы не услышите пальпитации сердца, если оно не стучит.</loadingscreentip>
 
-<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Нейротравма - синоним повреждения мозга. 200% нейротравмы означает смерть мозга.</loadingscreentip>
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ В Neurotrauma, Ваша голова получает больше урона, но Ваши руки и ноги получают меньше.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Если Вы хотите удалить орган вместо его замены, используйте Универсальный скальпель дважды.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Старайтесь не отпилить случайно голову пациента. Но в случае, если вы все-таки это сделали, докторы на аванпосте могут обратить распиленную кость.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Перевязка вывиха руки предотвращает блокировку кисти, а перевязка вывиха ноги восстанавливает скорость передвижения.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Избегайте использования оружия при вывихе или переломе руки.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Перевязка перелома руки предотвращает со временем блокировку кисти.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Вы можете принудительно уложить без сознания пациента на операционный стол, чтобы использовать установленный в нём фильтр.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Помните: лечите основное заболевание, а не симптомы. Симптомы служат методом диагностики.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Подводная лодка не начинает игру с достаточным запасом медикаментов? Убедитесь, что есть помеченный медицинский шкаф и что подлодка не «укомплектована вручную».</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Скорость операции зависит от соответствующего навыка. Более опытные врачи или хирурги проводят операции быстрее.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Бионические конечности не гниют вне холодильника, но в остальном идентичны биологическим.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Кровь циркулирует по организму. Убедитесь, что у пациента достаточно крови и его сердце работает.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Воздух поступает и выходит. Убедитесь, что у пациента достаточно кислорода.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Единственное лечение комы — время. Поддержание здоровья органов и крови пациента ускорит выздоровление.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Невнимательный член экипажа может получить ожоги третьей степени, прежде чем вы это заметите. Обязательно запаситесь эластичными бинтами или антибиотическим клеем.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Старайтесь не сканировать пациента слишком часто. Это может вызвать большое количество радиации.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Стазис-мешки защищают от давления и могут использоваться для выхода под воду.</loadingscreentip>
+
+<loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ Если пациент умирает слишком быстро, выиграйте время с помощью стазис-мешка.</loadingscreentip>
 
 <!-- <loadingscreentip>‖color:gui.blue‖Neurotrauma:‖end‖ </loadingscreentip> -->
 
