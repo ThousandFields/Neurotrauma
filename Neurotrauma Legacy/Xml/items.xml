@@ -1240,7 +1240,7 @@
   <Item name="" identifier="pressuremeds" category="Medical" cargocontaineridentifier="mediccrate"
       Tags="smallitem,chem,medical" description="" useinhealthinterface="true" scale="0.2"
       impactsoundtag="impact_metal_light" maxstacksize="32" maxstacksizecharacterinventory="8">
-    <PreferredContainer primary="medcab" spawnprobability="0.2"/>
+    <PreferredContainer primary="medcab" spawnprobability="0"/>
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.1"/>
     <PreferredContainer primary="outposttrashcan" minamount="0" maxamount="2" spawnprobability="0.01"/>
     <Price baseprice="100" soldbydefault="false">
@@ -1281,7 +1281,7 @@
   <Item name="" identifier="streptokinase" category="Medical" cargocontaineridentifier="mediccrate"
       Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.275"
       impactsoundtag="impact_metal_light" maxstacksize="32" maxstacksizecharacterinventory="8">
-    <PreferredContainer primary="medcab" spawnprobability="0.2"/>
+    <PreferredContainer primary="medcab" spawnprobability="0"/>
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.25"/>
     <PreferredContainer primary="outposttrashcan" minamount="0" maxamount="2" spawnprobability="0.01"/>
     <Price baseprice="100" soldbydefault="false">
@@ -1347,7 +1347,7 @@
   <Item name="" identifier="antisepticspray" category="Equipment" Tags="smallitem,tool,medical"
           useinhealthinterface="true" cargocontaineridentifier="metalcrate" description="" Scale="0.5"
           impactsoundtag="impact_soft">
-        <PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="1"/>
+        <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
         <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="3" spawnprobability="0.5"/>
         <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25"/>
         <Price baseprice="75">
