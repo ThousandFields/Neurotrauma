@@ -37,7 +37,7 @@
     </Item>
 
     <!-- Needle / prevents pneuomothorax from worsening -->
-    <Item name="" identifier="needle" category="Medical" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe,surgerytool" description="" useinhealthinterface="true" scale="0.2" impactsoundtag="impact_metal_light" maxstacksize="4">
+    <Item name="" identifier="needle" category="Medical" maxstacksize="16" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,syringe,surgerytool" description="" useinhealthinterface="true" scale="0.2" impactsoundtag="impact_metal_light" maxstacksize="4">
         <PreferredContainer primary="medcab" minamount="8" maxamount="12" spawnprobability="1"/>
         <PreferredContainer primary="abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.5"/>
         <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25"/>
