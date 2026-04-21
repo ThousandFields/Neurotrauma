@@ -46,7 +46,7 @@
     </Item>
 
     <Item name="" identifier="drainage" category="Medical" maxstacksize="16" maxstacksizecharacterinventory="4" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
-        <PreferredContainer primary="medcab" minamount="8" maxamount="12" spawnprobability="1"/>
+        <PreferredContainer primary="medcab" spawnprobability="0"/>
         <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.125"/>
 
         <Fabricate suitablefabricators="medicalfabricator" amount="1">

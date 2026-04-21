@@ -249,6 +249,10 @@
                 <SpawnItem identifier="osteosynthesisimplants" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
                 <SpawnItem identifier="osteosynthesisimplants" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
                 <SpawnItem identifier="spinalimplant" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="drainage" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="drainage" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="drainage" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <SpawnItem identifier="drainage" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
             </StatusEffect>
         </GreaterComponent>
        
