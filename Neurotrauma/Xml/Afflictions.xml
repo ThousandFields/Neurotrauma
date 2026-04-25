@@ -5609,7 +5609,7 @@ thats what the vomiting symptom is for -->
     <Effect minstrength="0" maxstrength="100"
       minvitalitydecrease="0"
       maxvitalitydecrease="0"
-      strengthchange="0"/>
+      strengthchange="-0.1"/>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
   </Bleeding>
   <!-- Vanilla affliction override end -->
