@@ -916,7 +916,7 @@ NT.ItemMethods.defibrillator = function(item, usingCharacter, targetCharacter, l
 end
 
 -- Automated External Defibrillator (AED)
-NT.ItemMethods.aed = function(item, usingCharacter, targetCharacter, limb)
+NT.ItemStartsWithMethods.aed = function(item, usingCharacter, targetCharacter, limb)
 	if item.Condition <= 0 then return end
 
 	local containedItem = item.OwnInventory.GetItemAt(0)
@@ -2616,7 +2616,7 @@ NT.ItemMethods.medstent = function(item, usingCharacter, targetCharacter, limb)
 end
 
 -- Antiseptic Spray
-NT.ItemMethods.antisepticspray = function(item, usingCharacter, targetCharacter, limb)
+NT.ItemStartsWithMethods.antisepticspray = function(item, usingCharacter, targetCharacter, limb)
 	local limbtype = limb.type
 
 	-- don't work on stasis
