@@ -99,6 +99,13 @@
         <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="tank">
             <Containable items="weldingtoolfuel,oxygensource,paint,analgesictank,anesthetictank"/>
         </ItemContainer>
+
+        <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0">
+            <StatusEffect type="OnSpawn" target="This" timeframe="1" delay="0.5" checkconditionalalways="true" setvalue="true" oneshot="true" comparison="And">
+                <Conditional timeframe="eq 0" />
+                <LuaHook name="NT.containerfills.spawn" />
+            </StatusEffect>
+        </GreaterComponent>
     </Item>
 
     <Item name="" identifier="autocpr" category="Equipment" useinhealthinterface="True" tags="smallitem,clothing,medical" scale="0.40" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
@@ -153,6 +160,13 @@
         <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
             <Containable items="mobilebattery"/>
         </ItemContainer>
+
+        <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0">
+            <StatusEffect type="OnSpawn" target="This" timeframe="1" delay="0.5" checkconditionalalways="true" setvalue="true" oneshot="true" comparison="And">
+                <Conditional timeframe="eq 0" />
+                <LuaHook name="NT.containerfills.spawn" />
+            </StatusEffect>
+        </GreaterComponent>
     </Item>
 
 </Items>

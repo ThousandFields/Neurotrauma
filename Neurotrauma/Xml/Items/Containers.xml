@@ -70,6 +70,13 @@
             </Attack>
         </MeleeWeapon>
         
+        <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0">
+            <StatusEffect type="OnSpawn" target="This" timeframe="1" delay="0.5" checkconditionalalways="true" setvalue="true" oneshot="true" comparison="And">
+                <Conditional timeframe="eq 0" />
+                <LuaHook name="NT.containerfills.spawn" />
+            </StatusEffect>
+        </GreaterComponent>
+        
         <ItemContainer capacity="6" keepopenwhenequipped="true" movableframe="true">
             <Containable items="smallitem,organ" excludeditems="toolbelt,toolbox" />
         </ItemContainer>
@@ -192,17 +199,11 @@
         <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true">
             <Containable items="surgerytool" excludeditems="toolbelt,toolbox" />
         </ItemContainer>
-
+        
         <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0">
             <StatusEffect type="OnSpawn" target="This" timeframe="1" delay="0.5" checkconditionalalways="true" setvalue="true" oneshot="true" comparison="And">
                 <Conditional timeframe="eq 0" />
-                <SpawnItem identifier="advscalpel" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="advhemostat" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="advretractors" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="tweezers" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="traumashears" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="surgicaldrill" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="surgerysaw" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <LuaHook name="NT.containerfills.spawn" />
             </StatusEffect>
         </GreaterComponent>
        
@@ -243,22 +244,11 @@
         <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true">
             <Containable items="surgerytool" excludeditems="toolbelt,toolbox" />
         </ItemContainer>
-
+        
         <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0">
             <StatusEffect type="OnSpawn" target="This" timeframe="1" delay="0.5" checkconditionalalways="true" setvalue="true" oneshot="true" comparison="And">
                 <Conditional timeframe="eq 0" />
-                <SpawnItem identifier="advscalpel" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="advhemostat" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="advretractors" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="tweezers" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="organscalpel_liver" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="organscalpel_kidneys" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="organscalpel_heart" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="organscalpel_lungs" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="organscalpel_brain" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="tweezers" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="surgicaldrill" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="surgerysaw" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <LuaHook name="NT.containerfills.spawn" />
             </StatusEffect>
         </GreaterComponent>
        
@@ -291,25 +281,11 @@
         <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true">
             <Containable items="surgerytool" excludeditems="toolbelt,toolbox" />
         </ItemContainer>
-
+        
         <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0">
             <StatusEffect type="OnSpawn" target="This" timeframe="1" delay="0.5" checkconditionalalways="true" setvalue="true" oneshot="true" comparison="And">
                 <Conditional timeframe="eq 0" />
-                <SpawnItem identifier="advscalpel" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="advhemostat" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="advretractors" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="tweezers" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="traumashears" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="surgicaldrill" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="surgerysaw" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="osteosynthesisimplants" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="spinalimplant" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="drainage" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="drainage" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="drainage" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="drainage" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="multiscalpel" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
-                <SpawnItem identifier="suture" count="16" spawnposition="ThisInventory" spawnifinventoryisfull="false" />
+                <LuaHook name="NT.containerfills.spawn" />
             </StatusEffect>
         </GreaterComponent>
        
@@ -340,12 +316,12 @@
             <Containable items="medtoolbox,medical,surgerytoolbox" excludeditems="cargoscooter" />
         </ItemContainer>
         
-        <ItemComponent>
-            <StatusEffect type="OnSpawn" target="This" disabledeltatime="true">
-                <Conditional scale="0.4" />
-                <LuaHook name="NT.medstartercrate.spawn" />
+        <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0">
+            <StatusEffect type="OnSpawn" target="This" timeframe="1" delay="0.5" checkconditionalalways="true" setvalue="true" oneshot="true" comparison="And">
+                <Conditional timeframe="eq 0" />
+                <LuaHook name="NT.containerfills.spawn" />
             </StatusEffect>
-        </ItemComponent>
+        </GreaterComponent>
     </Item>
 
     <!-- a bodybag *is* a container of sorts, right? -->

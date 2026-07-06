@@ -586,6 +586,13 @@
             <Containable items="antiseptic,antibloodloss1"/>
         </ItemContainer>
 
+        <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0">
+            <StatusEffect type="OnSpawn" target="This" timeframe="1" delay="0.5" checkconditionalalways="true" setvalue="true" oneshot="true" comparison="And">
+                <Conditional timeframe="eq 0" />
+                <LuaHook name="NT.containerfills.spawn" />
+            </StatusEffect>
+        </GreaterComponent>
+
         <SkillRequirementHint identifier="medical" level="40" />
     </Item>
 
