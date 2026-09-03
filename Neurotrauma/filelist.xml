@@ -123,6 +123,8 @@
 
   <Other file="%ModDir%/Credits.txt" />
 
+  <Dependency identifier="luacs" isoptional="false" ids="3693624471" />
+
   <Dependency identifier="nosophobia" isoptional="true" order="Above" ids="3463737539" />
   <Dependency identifier="ntsymbiote" isoptional="true" order="Below" ids="3258504017,3279145047,3449451433,3478666406" />
   <Dependency identifier="ntsymbiote" isoptional="true" order="Below" ids="3247940085" />
