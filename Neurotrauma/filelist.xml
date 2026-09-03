@@ -122,5 +122,25 @@
   <Other     file="%ModDir%/Characters/Human/Ragdolls/HumanDefaultRagdoll.xml" />
 
   <Other file="%ModDir%/Credits.txt" />
+
+  <Dependency identifier="nosophobia" isoptional="true" order="Above" ids="3463737539" />
+  <Dependency identifier="ntsymbiote" isoptional="true" order="Below" ids="3258504017,3279145047,3449451433,3478666406" />
+  <Dependency identifier="ntsymbiote" isoptional="true" order="Below" ids="3247940085" />
+
+  <FileGroup>
+    <Conditional dependencies="nosophobia" />
+    <Afflictions file="%ModDir%/Xml/Patches/Nosophobia/Afflictions.xml" />
+    <Afflictions file="%ModDir%/Xml/Patches/Nosophobia/diseases.xml" />
+  </FileGroup>
+
+  <FileGroup>
+    <Conditional dependencies="nosophobia,ntsymbiote" />
+    <Item file="%ModDir%/Xml/Patches/Nosophobia/ntsymbiote.xml" />
+  </FileGroup>
+
+  <FileGroup>
+    <Conditional dependencies="nosophobia,ntsymbiote_enhancedhusks" />
+    <Item file="%ModDir%/Xml/Patches/Nosophobia/ntsymbiote_enhancedhusks.xml" />
+  </FileGroup>
   
 </contentpackage>

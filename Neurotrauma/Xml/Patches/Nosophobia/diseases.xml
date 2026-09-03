@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Afflictions><Override>
+
+<!-- Doesn't burn humans (NT), causes cancer (Nosophobia) -->
+<Affliction name="Radiation sickness" identifier="radiationsickness" description="Burns and sores can be seen on patient's skin. They seem to be spreading." type="poison" causeofdeathdescription="Died of radiation sickness." selfcauseofdeathdescription="You have died of radiation sickness." indicatorlimb="Torso" showiconthreshold="700" showinhealthscannerthreshold="25" karmachangeonapplied="-1" treatmentthreshold="25" maxstrength="200" affectmachines="false" grainburst="3" healcostmultiplier="4.0" MedicalSkillGain="1.0">
+  <Description textidentifier="afflictiondescription.radiationsickness.low.self" target="Self" minstrength="0" maxstrength="75" />
+  <Description textidentifier="afflictiondescription.radiationsickness.high.self" target="Self" minstrength="75" maxstrength="200" />
+  <Description textidentifier="afflictiondescription.radiationsickness" target="OtherCharacter" minstrength="0" maxstrength="75" />
+  <Description textidentifier="afflictiondescription.radiationsickness.high" target="OtherCharacter" minstrength="75" maxstrength="200" />
+  <!-- No effects at this level  -->
+  <Effect minstrength="0" maxstrength="25" strengthchange="-0.07" />
+  <!-- Cause burns for non-humans depending on strength -->
+  <Effect minstrength="25" maxstrength="50" mingrainstrength="0.5" maxgrainstrength="0.25" strengthchange="-0.07">
+    <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" interval="0.1" disabledeltatime="true">
+      <Conditional ishuman="false"/>
+      <Affliction identifier="burn" amount="0.06" />
+    </StatusEffect>
+  </Effect>
+  <Effect minstrength="50" maxstrength="75" mingrainstrength="1.0" maxgrainstrength="0.5" strengthchange="-0.07" minchromaticaberration="0.0" maxchromaticaberration="1.0" minbodytint="255,0,0,0" maxbodytint="255,0,0,30">
+    <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" interval="0.1" disabledeltatime="true">
+      <Conditional ishuman="false"/>
+      <Affliction identifier="burn" amount="0.115" />
+    </StatusEffect>
+  </Effect>
+  <Effect minstrength="75" maxstrength="100" mingrainstrength="1.0" maxgrainstrength="0.75" strengthchange="-0.07" minchromaticaberration="1.0" maxchromaticaberration="5.0" minbodytint="255,0,0,30" maxbodytint="255,0,0,60">
+    <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" interval="0.1" disabledeltatime="true">
+      <Conditional ishuman="false"/>
+      <Affliction identifier="burn" amount="0.235" />
+    </StatusEffect>
+  </Effect>
+  <Effect minstrength="100" maxstrength="125" mingrainstrength="1.0" maxgrainstrength="1.0" strengthchange="-0.07" minchromaticaberration="1.0" maxchromaticaberration="5.0" minbodytint="255,0,0,60" maxbodytint="255,0,0,90">
+    <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" interval="0.1" disabledeltatime="true">
+      <Conditional ishuman="false"/>
+      <Affliction identifier="burn" amount="0.395" />
+    </StatusEffect>
+  </Effect>
+  <Effect minstrength="125" maxstrength="150" mingrainstrength="1.0" maxgrainstrength="1.0" strengthchange="-0.07" minchromaticaberration="1.0" maxchromaticaberration="5.0" minbodytint="255,0,0,90" maxbodytint="255,0,0,120">
+    <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" interval="0.1" disabledeltatime="true">
+      <Conditional ishuman="false"/>
+      <Affliction identifier="burn" amount="0.555" />
+    </StatusEffect>
+  </Effect>
+  <Effect minstrength="150" maxstrength="175" mingrainstrength="1.0" maxgrainstrength="1.0" strengthchange="-0.07" minchromaticaberration="1.0" maxchromaticaberration="5.0" minbodytint="255,0,0,120" maxbodytint="255,0,0,150">
+    <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" interval="0.1" disabledeltatime="true">
+      <Conditional ishuman="false"/>
+      <Affliction identifier="burn" amount="0.715" />
+    </StatusEffect>
+  </Effect>
+  <Effect minstrength="175" maxstrength="200" mingrainstrength="1.0" maxgrainstrength="1.0" strengthchange="-0.07" minchromaticaberration="0.1" maxchromaticaberration="0.5" minbodytint="255,0,0,150" maxbodytint="255,0,0,180">
+    <StatusEffect target="Character" multiplyafflictionsbymaxvitality="true" interval="0.1" disabledeltatime="true">
+      <Conditional ishuman="false"/>
+      <Affliction identifier="burn" amount="0.875" />
+    </StatusEffect>
+  </Effect>
+  <!-- Not possible to get cancer under 25% rad sickness, for NT QOL -->
+  <PeriodicEffect mininterval="5" maxinterval="10">
+    <StatusEffect target="Character" comparison="and">
+      <Conditional IsHuman="True" />
+      <Conditional IsDead="False" />
+      <Conditional radiationsickness="gt 25" /> 
+      <Conditional cancer_stage2="lte 0" />
+      <Conditional cancer_stage3="lte 0" />
+      <Conditional cancer_stage4="lte 0" />
+      <Affliction identifier="cancer_stage1" amount="1" probability="0.075" />
+    </StatusEffect>
+  </PeriodicEffect>
+  <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,768,128,128" color="195,136,60,255" origin="0,0" />
+</Affliction>
+
+</Override></Afflictions>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Afflictions><Override>
+
+<!-- Causes rabies (Nosophobia) -->
+<Affliction
+name=""
+identifier="infectedwound"
+description=""
+healableinmedicalclinic="true"
+basehealcost="80"
+targets="human"
+type="gaze"
+isbuff="false"
+limbspecific="true"
+maxstrength="100"
+showinhealthscannerthreshold="20"
+showiconthreshold="700">
+
+<PeriodicEffect mininterval="45" maxinterval="60">
+  <StatusEffect target="Character" comparison="and">
+    <Conditional IsHuman="True" />
+    <Conditional IsDead="False" />
+    <Conditional cancer_stage2="lte 0" />
+    <Conditional cancer_stage3="lte 0" />
+    <Conditional cancer_stage4="lte 0" />
+    <Conditional infectedwound="gte 50" />
+    <Affliction identifier="rabieslyssavirus" amount="1" probability="0.01" />
+  </StatusEffect>
+</PeriodicEffect>
+
+<icon texture="%ModDir:3190189044%/Images/AfflictionIcons.png" sourcerect="640,0,128,128" color="139,60,42,255" origin="0,0"/>
+</Affliction>
+
+<!-- Cannot be gained (NT) -->
+<Affliction
+identifier="infection"
+type="infection"
+limbspecific="true"
+treatmentthreshold="1000"
+showinhealthscannerthreshold="1000"
+showiconthreshold="1000"
+maxstrength="200"
+healcostmultiplier="2.5">
+<Effect minstrength="0" maxstrength="200" strengthchange="-1000"/>
+<icon texture="Content/UI/TalentsIcons4.png" sourcerect="0,384,128,128" color="84,171,90,255" origin="0,0"/>
+</Affliction>
+
+</Override></Afflictions>
